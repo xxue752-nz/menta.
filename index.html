@@ -253,6 +253,33 @@
     html {
       scroll-behavior: smooth;
     }
+    /* —— 三个手机截图排成一排 —— */
+.device-row {
+  max-width: 1000px;        /* 整块区域的最大宽度 */
+  margin: 20px auto 0;      /* 居中 + 和上面内容留点空 */
+  display: flex;
+  flex-wrap: wrap;          /* 屏幕窄的时候自动换行 */
+  justify-content: center;  /* 居中对齐 */
+  gap: 20px;                /* 图片之间的间距 */
+}
+
+/* —— 单张手机截图的样式 —— */
+.device-shot {
+  display: block;
+  width: 100%;
+  max-width: 260px;         /* 每张图看起来多宽，可以改成 230 / 280 */
+  border-radius: 26px;      /* 圆角，模拟手机壳边缘 */
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.35);  /* 投影 */
+  background: #000;         /* 防止截图白边，看起来更扎实 */
+}
+
+/* 小屏幕时略微缩小一点 */
+@media (max-width: 640px) {
+  .device-shot {
+    max-width: 220px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -482,8 +509,20 @@ for scalable, privacy-preserving mental health monitoring.
           </li>
         </ul>
         <p class="highlight">
-          TODO：可以在这里放 1–2 张 app 截图（例如 <code>images/ios_demo.png</code>），并增加
-          “How to run” 链接，指向你的 GitHub/Hugging Face README。
+          <div class="device-row">
+  <img src="device_demo1.jpg"
+       alt="Menta mobile UI – model selection"
+       class="device-shot" />
+
+  <img src="device_demo2.jpg"
+       alt="Menta mobile UI – task selection"
+       class="device-shot" />
+
+  <img src="device_demo3.jpg"
+       alt="Menta mobile UI – sample count selection"
+       class="device-shot" />
+</div>
+
         </p>
       </section>
 
