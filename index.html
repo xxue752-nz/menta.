@@ -279,6 +279,16 @@
     max-width: 220px;
   }
 }
+    /* 按钮里的小 logo 图标 */
+.btn-icon-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  display: inline-block;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
 
   </style>
 </head>
@@ -302,22 +312,27 @@
       </div>
 
       <div class="btn-row">
-        <!-- GitHub -->
-        <a class="link-btn"
-           href="https://github.com/xxue752-nz/Menta.git"
-           target="_blank" rel="noopener noreferrer">
-          <span class="link-icon"></span>
-          <span>GitHub</span>
-        </a>
+  <!-- GitHub 按钮 -->
+  <a class="link-btn"
+     href="https://github.com/xxue752-nz/Menta"
+     target="_blank" rel="noopener noreferrer">
+    <img src="images/github-logo.png"
+         alt="GitHub logo"
+         class="btn-icon-img" />
+    <span>GitHub</span>
+  </a>
 
-        <!-- Hugging Face -->
-        <a class="link-btn"
-           href="https://huggingface.co/mHealthAI/Menta"
-           target="_blank" rel="noopener noreferrer">
-          <span class="link-icon"></span>
-          <span>Hugging&nbsp;Face</span>
-        </a>
-      </div>
+  <!-- Hugging Face 按钮 -->
+  <a class="link-btn"
+     href="https://huggingface.co/mHealthAI/Menta"
+     target="_blank" rel="noopener noreferrer">
+    <img src="images/hf-logo.png"
+         alt="Hugging Face logo"
+         class="btn-icon-img" />
+    <span>Hugging&nbsp;Face</span>
+  </a>
+</div>
+
     </div>
   </header>
 
