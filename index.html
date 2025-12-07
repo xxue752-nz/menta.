@@ -288,6 +288,17 @@
   object-fit: contain;
   vertical-align: middle;
 }
+.authors sup {
+  margin-left: 2px;        /* 名字和上标之间留一点空 */
+  font-size: 0.75em;
+}
+
+.equal-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
 
 
   </style>
@@ -295,24 +306,34 @@
 <body>
 
   <!-- ---------- HERO 顶部 ---------- -->
-  <header class="hero">
-    <div class="hero-inner">
-      <h1 class="title">Menta: A Small Language Model for On-Device Mental Health Prediction</h1>
+  <section class="hero">
+  <div class="hero-inner">
+    <h1 class="title">Menta: A Small Language Model for On-Device Mental Health Prediction</h1>
 
-      <div class="authors">
-        Tianyi Zhang*<sup>1</sup>, Xiangyuan Xue*<sup>2</sup>, Lingyan Ruan<sup>1</sup>,
-        Shiya Fu<sup>1</sup>, Feng Xia<sup>3</sup>, Simon D'Alfonso<sup>1</sup>,<br />
-        Vassilis Kostakos<sup>1</sup>, Ting Dang<sup>1</sup>, Hong Jia<sup>2</sup>
-      </div>
+    <!-- 作者：名字 + * + 上标符号 -->
+    <div class="authors">
+      Tianyi Zhang*<sup>†</sup>,
+      Xiangyuan Xue*<sup>§</sup>,
+      Lingyan Ruan<sup>†</sup>,
+      Shiya Fu<sup>†</sup>,
+      Feng Xia<sup>‡</sup>,
+      Simon D'Alfonso<sup>†</sup>,
+      Vassilis Kostakos<sup>†</sup>,
+      Ting Dang<sup>†</sup>,
+      Hong Jia<sup>§</sup>
+    </div>
 
-      <div class="affiliations">
-        <sup>1</sup> The University of Melbourne, Australia &nbsp;·&nbsp;
-        <sup>2</sup> The University of Auckland, New&nbsp;Zealand &nbsp;·&nbsp;
-        <sup>3</sup> RMIT University, Australia
-      </div>
-      <div class="email-note">
-  * These authors contributed equally to this work.<br />
-</div>
+    <!-- 单位：先 Melbourne，再 RMIT，最后 Auckland -->
+    <div class="affiliations">
+      <span><sup>†</sup> The University of Melbourne, Australia</span><br />
+      <span><sup>‡</sup> RMIT University, Australia</span><br />
+      <span><sup>§</sup> The University of Auckland, New&nbsp;Zealand</span><br />
+
+      <!-- equal contribution 说明，紧挨着单位 -->
+      <span class="equal-note">
+        * These authors contributed equally to this work.
+      </span>
+    </div>
 
       <div class="btn-row">
   <!-- GitHub 按钮 -->
