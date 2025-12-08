@@ -299,6 +299,16 @@
   font-size: 0.85rem;
   color: var(--text-sub);
 }
+.method-list {
+  max-width: 900px;        /* 可选：控制一行不要太长 */
+  margin: 0 auto;          /* 让整个列表块在页面中居中，但内容左对齐 */
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.method-list li {
+  text-align: left;        /* 覆盖从父级继承的居中样式 */
+}
 
 
   </style>
@@ -438,7 +448,7 @@ for scalable, privacy-preserving mental health monitoring.
           matrices), enabling effective fine-tuning while updating only a small fraction of the total
           parameters.
         </p>
-        <ul>
+        <ul class="method-list">
           <li>
             <strong>Parameter-efficient tuning.</strong> Only LoRA parameters and classifier heads are
             trained; base model weights are frozen, substantially reducing GPU memory requirements.
