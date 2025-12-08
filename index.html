@@ -449,25 +449,12 @@ for scalable, privacy-preserving mental health monitoring.
           parameters.
         </p>
         <ul class="method-list">
-          <li>
-            <strong>Parameter-efficient tuning.</strong> Only LoRA parameters and classifier heads are
-            trained; base model weights are frozen, substantially reducing GPU memory requirements.
-          </li>
-          <li>
-            <strong>Task sampling.</strong> A task-level sampling strategy mitigates dataset size
-            imbalance, preventing large datasets from dominating the multi-task objective.
-          </li>
-          <li>
-            <strong>Class imbalance handling.</strong> Class-weighted cross-entropy and a
-            balanced-accuracy–aware term are combined to encourage robust performance on minority
-            classes.
-          </li>
-          <li>
-            <strong>Joint optimization.</strong> All six tasks are optimized in a single training run,
-            encouraging the model to share knowledge across stress, depression, and suicidality
-            detection.
-          </li>
-        </ul>
+  <li><strong>Parameter-efficient tuning.</strong> Only LoRA parameters and classifier heads are trained; base model weights are frozen, substantially reducing GPU memory requirements.</li>
+  <li><strong>Task sampling.</strong> A task-level sampling strategy mitigates dataset size imbalance, preventing large datasets from dominating the multi-task objective.</li>
+  <li><strong>Class imbalance handling.</strong> Class-weighted cross-entropy and a balanced-accuracy–aware term are combined to encourage robust performance on minority classes.</li>
+  <li><strong>Joint optimization.</strong> All six tasks are optimized in a single training run, encouraging the model to share knowledge across stress, depression, and suicidality detection.</li>
+</ul>
+
       </section>
 
       <!-- 3. Results -->
